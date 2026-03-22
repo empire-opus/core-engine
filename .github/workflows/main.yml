@@ -1,0 +1,20 @@
+name: Build Core Engine
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Print a message
+        run: echo "Building Core Engine..."
+      - name: Build the project
+        run: |
+          echo "Building the project..."
+          # Add build commands here
